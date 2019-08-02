@@ -1,6 +1,11 @@
 spring:
   application:
     name: zuul
+  rabbitmq:
+    host: 192.168.159.129
+    port: 5672
+    username: admin
+    password: admin
     
 server:
   port: 3001
@@ -22,7 +27,7 @@ ribbon:
   ConnectTimeout: 1000
   ReadTimeout: 1000
   MaxAutoRetriesNextServer: 1
-  MaxAutoRetries: 1   #也有zuul的默认配置
+  MaxAutoRetries: 1   
   
 hystrix:
   command:
